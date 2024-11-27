@@ -1,4 +1,7 @@
-export const menuItems = [
+import Image from "next/image";
+import Link from "next/link";
+
+const menuItems = [
   {
     title: "MENU",
     items: [
@@ -112,3 +115,35 @@ export const menuItems = [
     ],
   },
 ];
+
+const Menu = () => {
+  return (
+    <div className="mt-4 text-sm">
+      {menuItems.map((item) => (
+        <div key={item.title} className="flex flex-col gap-2">
+          <span className="my-4 hidden font-light text-gray-400 lg:block">
+            {item.title}
+          </span>
+          {item.items.map((subItem) => (
+            <Link
+              key={subItem.label}
+              href={subItem.href}
+              className="group flex items-center justify-center gap-4 py-2 text-gray-500 hover:text-black lg:justify-start"
+            >
+              <Image
+                src={subItem.icon}
+                alt={subItem.label}
+                width={20}
+                height={20}
+                className="opacity-75 group-hover:opacity-100"
+              />
+              <span className="hidden lg:block">{subItem.label}</span>
+            </Link>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Menu;

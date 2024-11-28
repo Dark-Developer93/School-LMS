@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* override react-calendar styles  start */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: "Inter" !important;
+}
+
+.react-calendar__tile.react-calendar__tile--now:not(
+    .react-calendar__tile--active
+  ) {
+  background: #fae27c !important;
+}
+
+.react-calendar__tile--active {
+  background: #c3ebfa !important;
+  color: #000 !important;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 600 !important;
+}
+/* override react-calendar styles  end */

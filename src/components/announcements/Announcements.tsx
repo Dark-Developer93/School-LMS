@@ -6,7 +6,7 @@ const Announcements = () => {
         <span className="text-xs text-gray-400">View All</span>
       </div>
       <div className="mt-4 flex flex-col gap-4">
-        <div className="bg-lamaSkyLight rounded-md p-4">
+        <div className="rounded-md bg-sky-light p-4">
           <div className="flex items-center justify-between">
             <h2 className="font-medium">Lorem ipsum dolor sit</h2>
             <span className="rounded-md bg-white px-1 py-1 text-xs text-gray-400">
@@ -18,7 +18,7 @@ const Announcements = () => {
             expedita. Rerum, quidem facilis?
           </p>
         </div>
-        <div className="bg-lamaPurpleLight rounded-md p-4">
+        <div className="rounded-md bg-purple-light p-4">
           <div className="flex items-center justify-between">
             <h2 className="font-medium">Lorem ipsum dolor sit</h2>
             <span className="rounded-md bg-white px-1 py-1 text-xs text-gray-400">
@@ -30,7 +30,7 @@ const Announcements = () => {
             expedita. Rerum, quidem facilis?
           </p>
         </div>
-        <div className="bg-lamaYellowLight rounded-md p-4">
+        <div className="rounded-md bg-yellow-light p-4">
           <div className="flex items-center justify-between">
             <h2 className="font-medium">Lorem ipsum dolor sit</h2>
             <span className="rounded-md bg-white px-1 py-1 text-xs text-gray-400">

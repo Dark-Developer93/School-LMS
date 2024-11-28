@@ -121,7 +121,7 @@ const Menu = () => {
     <div className="mt-4 text-sm">
       {menuItems.map((item) => (
         <div key={item.title} className="flex flex-col gap-2">
-          <span className="my-4 hidden font-light text-gray-400 lg:block">
+          <span className="hidden font-light text-gray-400 lg:block">
             {item.title}
           </span>
           {item.items.map((subItem) => (

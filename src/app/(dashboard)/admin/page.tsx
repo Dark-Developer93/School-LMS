@@ -2,7 +2,7 @@ import Announcements from "@/components/announcements/Announcements";
 import BarChart from "@/components/charts/BarChart";
 import LineChart from "@/components/charts/LineChart";
 import RadialBarChart from "@/components/charts/RadialBarChart";
-import EventCalendar from "@/components/event-calendar/EventCalendar";
+import EventCalendar from "@/components/calendars/EventCalendar";
 import InfoCard from "@/components/info-card/InfoCard";
 
 const AdminPage = () => {

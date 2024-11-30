@@ -1,5 +1,7 @@
 // TEMPORARY DATA
 
+import { addDays, setHours, setMinutes, startOfWeek } from "date-fns";
+
 export const role = "admin";
 
 export const teachersData = [
@@ -915,148 +917,159 @@ export const announcementsData = [
   },
 ];
 
-// YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
+// Helper function to get a date for the current week
+function getDateForWeek(dayOffset: number, hours: number, minutes: number) {
+  const monday = startOfWeek(new Date(), { weekStartsOn: 1 }); // 1 = Monday
+  const date = addDays(monday, dayOffset);
+  return setMinutes(setHours(date, hours), minutes);
+}
+
 export const calendarEvents = [
+  // Monday (dayOffset: 0)
   {
     title: "Math",
     allDay: false,
-    start: new Date(2024, 7, 12, 8, 0),
-    end: new Date(2024, 7, 12, 8, 45),
+    start: getDateForWeek(0, 8, 0),
+    end: getDateForWeek(0, 8, 45),
   },
   {
     title: "English",
     allDay: false,
-    start: new Date(2024, 7, 12, 9, 0),
-    end: new Date(2024, 7, 12, 9, 45),
+    start: getDateForWeek(0, 9, 0),
+    end: getDateForWeek(0, 9, 45),
   },
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 12, 10, 0),
-    end: new Date(2024, 7, 12, 10, 45),
+    start: getDateForWeek(0, 10, 0),
+    end: getDateForWeek(0, 10, 45),
   },
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 7, 12, 11, 0),
-    end: new Date(2024, 7, 12, 11, 45),
+    start: getDateForWeek(0, 11, 0),
+    end: getDateForWeek(0, 11, 45),
   },
   {
     title: "Chemistry",
     allDay: false,
-    start: new Date(2024, 7, 12, 13, 0),
-    end: new Date(2024, 7, 12, 13, 45),
+    start: getDateForWeek(0, 13, 0),
+    end: getDateForWeek(0, 13, 45),
   },
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 12, 14, 0),
-    end: new Date(2024, 7, 12, 14, 45),
+    start: getDateForWeek(0, 14, 0),
+    end: getDateForWeek(0, 14, 45),
   },
+
+  // Tuesday (dayOffset: 1)
   {
     title: "English",
     allDay: false,
-    start: new Date(2024, 7, 13, 9, 0),
-    end: new Date(2024, 7, 13, 9, 45),
+    start: getDateForWeek(1, 9, 0),
+    end: getDateForWeek(1, 9, 45),
   },
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 13, 10, 0),
-    end: new Date(2024, 7, 13, 10, 45),
+    start: getDateForWeek(1, 10, 0),
+    end: getDateForWeek(1, 10, 45),
   },
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 7, 13, 11, 0),
-    end: new Date(2024, 7, 13, 11, 45),
+    start: getDateForWeek(1, 11, 0),
+    end: getDateForWeek(1, 11, 45),
   },
-
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 13, 14, 0),
-    end: new Date(2024, 7, 13, 14, 45),
+    start: getDateForWeek(1, 14, 0),
+    end: getDateForWeek(1, 14, 45),
   },
+
+  // Wednesday (dayOffset: 2)
   {
     title: "Math",
     allDay: false,
-    start: new Date(2024, 7, 14, 8, 0),
-    end: new Date(2024, 7, 14, 8, 45),
+    start: getDateForWeek(2, 8, 0),
+    end: getDateForWeek(2, 8, 45),
   },
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 14, 10, 0),
-    end: new Date(2024, 7, 14, 10, 45),
-  },
-
-  {
-    title: "Chemistry",
-    allDay: false,
-    start: new Date(2024, 7, 14, 13, 0),
-    end: new Date(2024, 7, 14, 13, 45),
-  },
-  {
-    title: "History",
-    allDay: false,
-    start: new Date(2024, 7, 14, 14, 0),
-    end: new Date(2024, 7, 13, 14, 45),
-  },
-  {
-    title: "English",
-    allDay: false,
-    start: new Date(2024, 7, 15, 9, 0),
-    end: new Date(2024, 7, 15, 9, 45),
-  },
-  {
-    title: "Biology",
-    allDay: false,
-    start: new Date(2024, 7, 15, 10, 0),
-    end: new Date(2024, 7, 15, 10, 45),
-  },
-  {
-    title: "Physics",
-    allDay: false,
-    start: new Date(2024, 7, 15, 11, 0),
-    end: new Date(2024, 7, 15, 11, 45),
-  },
-
-  {
-    title: "History",
-    allDay: false,
-    start: new Date(2024, 7, 15, 14, 0),
-    end: new Date(2024, 7, 15, 14, 45),
-  },
-  {
-    title: "Math",
-    allDay: false,
-    start: new Date(2024, 7, 16, 8, 0),
-    end: new Date(2024, 7, 16, 8, 45),
-  },
-  {
-    title: "English",
-    allDay: false,
-    start: new Date(2024, 7, 16, 9, 0),
-    end: new Date(2024, 7, 16, 9, 45),
-  },
-
-  {
-    title: "Physics",
-    allDay: false,
-    start: new Date(2024, 7, 16, 11, 0),
-    end: new Date(2024, 7, 16, 11, 45),
+    start: getDateForWeek(2, 10, 0),
+    end: getDateForWeek(2, 10, 45),
   },
   {
     title: "Chemistry",
     allDay: false,
-    start: new Date(2024, 7, 16, 13, 0),
-    end: new Date(2024, 7, 16, 13, 45),
+    start: getDateForWeek(2, 13, 0),
+    end: getDateForWeek(2, 13, 45),
   },
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 16, 14, 0),
-    end: new Date(2024, 7, 16, 14, 45),
+    start: getDateForWeek(2, 14, 0),
+    end: getDateForWeek(2, 14, 45),
+  },
+
+  // Thursday (dayOffset: 3)
+  {
+    title: "English",
+    allDay: false,
+    start: getDateForWeek(3, 9, 0),
+    end: getDateForWeek(3, 9, 45),
+  },
+  {
+    title: "Biology",
+    allDay: false,
+    start: getDateForWeek(3, 10, 0),
+    end: getDateForWeek(3, 10, 45),
+  },
+  {
+    title: "Physics",
+    allDay: false,
+    start: getDateForWeek(3, 11, 0),
+    end: getDateForWeek(3, 11, 45),
+  },
+  {
+    title: "History",
+    allDay: false,
+    start: getDateForWeek(3, 14, 0),
+    end: getDateForWeek(3, 14, 45),
+  },
+
+  // Friday (dayOffset: 4)
+  {
+    title: "Math",
+    allDay: false,
+    start: getDateForWeek(4, 8, 0),
+    end: getDateForWeek(4, 8, 45),
+  },
+  {
+    title: "English",
+    allDay: false,
+    start: getDateForWeek(4, 9, 0),
+    end: getDateForWeek(4, 9, 45),
+  },
+  {
+    title: "Physics",
+    allDay: false,
+    start: getDateForWeek(4, 11, 0),
+    end: getDateForWeek(4, 11, 45),
+  },
+  {
+    title: "Chemistry",
+    allDay: false,
+    start: getDateForWeek(4, 13, 0),
+    end: getDateForWeek(4, 13, 45),
+  },
+  {
+    title: "History",
+    allDay: false,
+    start: getDateForWeek(4, 14, 0),
+    end: getDateForWeek(4, 14, 45),
   },
 ];

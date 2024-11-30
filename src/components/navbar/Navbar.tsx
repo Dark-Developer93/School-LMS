@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -14,10 +15,10 @@ const Navbar = () => {
       </div>
       {/* ICONS AND USER */}
       <div className="flex w-full items-center justify-end gap-6">
-        <div className="flex h-7 w-7 cursor-pointer items-center justify-center rounded-full bg-white">
+        <div className="flex h-7 w-7 cursor-pointer items-center justify-center rounded-full">
           <Image src="/message.png" alt="message" width={20} height={20} />
         </div>
-        <div className="relative flex h-7 w-7 cursor-pointer items-center justify-center rounded-full bg-white">
+        <div className="relative flex h-7 w-7 cursor-pointer items-center justify-center rounded-full">
           <Image
             src="/announcement.png"
             alt="announcement"
@@ -32,13 +33,15 @@ const Navbar = () => {
           <span className="text-xs font-medium leading-3">John Doe</span>
           <span className="text-right text-[10px] text-gray-500">Admin</span>
         </div>
-        <Image
-          src="/avatar.png"
-          alt="avatar"
-          width={36}
-          height={36}
-          className="cursor-pointer rounded-full"
-        />
+        <Link href="/profile">
+          <Image
+            src="/avatar.png"
+            alt="avatar"
+            width={36}
+            height={36}
+            className="rounded-full"
+          />
+        </Link>
       </div>
     </div>
   );

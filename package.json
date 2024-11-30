@@ -2,7 +2,7 @@
   "name": "school-lms",
   "version": "0.1.0",
   "private": true,
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,11 +13,17 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "@types/react-big-calendar": "^1.16.0",
+    "date-fns": "^4.1.0",
     "next": "14.2.5",
     "react": "^18",
+    "react-big-calendar": "^1.16.3",
     "react-calendar": "^5.1.0",
     "react-dom": "^18",
-    "recharts": "^2.13.3"
+    "react-hook-form": "^7.53.2",
+    "recharts": "^2.13.3",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",

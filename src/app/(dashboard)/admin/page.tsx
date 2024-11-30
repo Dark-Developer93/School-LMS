@@ -3,7 +3,7 @@ import BarChart from "@/components/charts/BarChart";
 import LineChart from "@/components/charts/LineChart";
 import RadialBarChart from "@/components/charts/RadialBarChart";
 import EventCalendar from "@/components/calendars/EventCalendar";
-import InfoCard from "@/components/info-card/InfoCard";
+import InfoCard from "@/components/cards/InfoCard";
 
 const AdminPage = () => {
   return (

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --event-white: theme("colors.white");
+  --event-black: theme("colors.black");
+  --event-sky: theme("colors.sky");
+  --event-sky-light-alt: theme("colors.sky-light-alt");
+  --event-purple: theme("colors.purple");
+  --event-purple-light: theme("colors.purple-light");
+  --event-purple-light-alt: theme("colors.purple-light-alt");
+  --event-yellow: theme("colors.yellow");
+  --event-yellow-light: theme("colors.yellow-light");
+}
+
 /* override react-calendar styles  start */
 .react-calendar {
   width: 100% !important;
@@ -12,15 +24,101 @@
 .react-calendar__tile.react-calendar__tile--now:not(
     .react-calendar__tile--active
   ) {
-  background: #fae27c !important;
+  background: var(--event-yellow) !important;
 }
 
 .react-calendar__tile--active {
-  background: #c3ebfa !important;
-  color: #000 !important;
+  background: var(--event-sky) !important;
+  color: var(--event-black) !important;
 }
 
 .react-calendar__navigation__label__labelText {
   font-weight: 600 !important;
 }
 /* override react-calendar styles  end */
+
+/* override react-big-calendar styles  start */
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+
+.rbc-toolbar-label {
+  text-align: right !important;
+  padding: 0px 20px !important;
+}
+
+.rbc-btn-group:last-child {
+  font-size: 13px !important;
+}
+
+.rbc-btn-group:last-child button {
+  border: none !important;
+  background-color: var(--event-purple-light) !important;
+  margin-left: 2px !important;
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #dbdafe !important;
+  box-shadow: none !important;
+}
+
+.rbc-time-view {
+  border-color: var(--event-white) !important;
+}
+
+.rbc-time-header {
+  border-top: 1px solid #ddd !important;
+}
+
+.rbc-time-content {
+  border: none !important;
+}
+
+.rbc-time-gutter.rbc-time-column {
+  font-size: 12px !important;
+}
+
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  padding: 0px 20px !important;
+}
+
+.rbc-allday-cell {
+  display: none !important;
+}
+
+.rbc-timeslot-group,
+.rbc-time-header-gutter {
+  background-color: #f7fdff !important;
+}
+
+.rbc-day-slot {
+  font-size: 14px !important;
+}
+
+.rbc-event {
+  border: none !important;
+  color: black !important;
+  padding: 10px !important;
+  margin: 10px !important;
+  width: 99% !important;
+}
+
+.rbc-event:nth-child(4n + 1) {
+  background-color: var(--event-sky-light-alt) !important;
+}
+.rbc-event:nth-child(4n + 2) {
+  background-color: var(--event-yellow-light) !important;
+}
+.rbc-event:nth-child(4n + 3) {
+  background-color: var(--event-purple-light-alt) !important;
+}
+.rbc-event:nth-child(4n + 4) {
+  background-color: var(--event-purple-light) !important;
+}
+
+.rbc-event-label {
+  color: gray !important;
+  margin-bottom: 5px;
+}
+
+/* override react-big-calendar styles  end */

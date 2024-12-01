@@ -6,8 +6,8 @@ import Link from "next/link";
 import Announcements from "@/components/announcements/Announcements";
 import BigCalendar from "@/components/calendars/BigCalendar";
 import FormModal from "@/components/forms/FormModal";
-import { role } from "@/lib/data";
 import PieChart from "@/components/charts/PieChart";
+import { role } from "@/lib/data";
 
 const SingleTeacherPage = () => {
   return (

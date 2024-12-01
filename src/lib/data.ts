@@ -1,5 +1,6 @@
 // TEMPORARY DATA
 
+import { Result } from "@/types";
 import { addDays, setHours, setMinutes, startOfWeek } from "date-fns";
 
 export const role = "admin";
@@ -668,7 +669,7 @@ export const assignmentsData = [
   },
 ];
 
-export const resultsData = [
+export const resultsData: Result[] = [
   {
     id: 1,
     subject: "Math",

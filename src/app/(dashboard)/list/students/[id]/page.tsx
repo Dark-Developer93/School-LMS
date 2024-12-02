@@ -5,9 +5,9 @@ import Link from "next/link";
 
 import Announcements from "@/components/announcements/Announcements";
 import BigCalendar from "@/components/calendars/BigCalendar";
-// import PieChart from "@/components/charts/PieChart";
 import FormModal from "@/components/forms/FormModal";
 import { role } from "@/lib/data";
+import PerformanceChart from "@/components/charts/performanceChart";
 
 const SingleStudentPage = () => {
   return (
@@ -165,7 +165,7 @@ const SingleStudentPage = () => {
             </Link>
           </div>
         </div>
-        {/* <PieChart /> */}
+        <PerformanceChart />
         <Announcements />
       </div>
     </div>

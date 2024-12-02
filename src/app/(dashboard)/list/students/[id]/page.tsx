@@ -7,7 +7,7 @@ import Announcements from "@/components/announcements/Announcements";
 import BigCalendar from "@/components/calendars/BigCalendar";
 import FormModal from "@/components/forms/FormModal";
 import { role } from "@/lib/data";
-import PerformanceChart from "@/components/charts/performanceChart";
+import PerformanceChart from "@/components/charts/PerformanceChart";
 
 const SingleStudentPage = () => {
   return (

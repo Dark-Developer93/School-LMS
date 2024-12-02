@@ -6,7 +6,7 @@ import Link from "next/link";
 import Announcements from "@/components/announcements/Announcements";
 import BigCalendar from "@/components/calendars/BigCalendar";
 import FormModal from "@/components/forms/FormModal";
-import PerformanceChart from "@/components/charts/performanceChart";
+import PerformanceChart from "@/components/charts/PerformanceChart";
 import { role } from "@/lib/data";
 
 const SingleTeacherPage = () => {

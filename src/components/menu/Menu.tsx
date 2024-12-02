@@ -1,7 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-import { role } from "@/lib/data";
+import { useRole } from "@/context/RoleContext";
 
 const menuItems = [
   {
@@ -119,6 +120,8 @@ const menuItems = [
 ];
 
 const Menu = () => {
+  const { role } = useRole();
+
   return (
     <div className="mt-4 text-sm">
       {menuItems.map((item) => (

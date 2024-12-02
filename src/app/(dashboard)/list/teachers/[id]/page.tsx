@@ -7,9 +7,11 @@ import Announcements from "@/components/announcements/Announcements";
 import BigCalendar from "@/components/calendars/BigCalendar";
 import FormModal from "@/components/forms/FormModal";
 import PerformanceChart from "@/components/charts/PerformanceChart";
-import { role } from "@/lib/data";
+import { useRole } from "@/context/RoleContext";
 
 const SingleTeacherPage = () => {
+  const { role } = useRole();
+
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 xl:flex-row">
       {/* LEFT */}

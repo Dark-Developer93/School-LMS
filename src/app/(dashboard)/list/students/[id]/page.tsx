@@ -6,10 +6,12 @@ import Link from "next/link";
 import Announcements from "@/components/announcements/Announcements";
 import BigCalendar from "@/components/calendars/BigCalendar";
 import FormModal from "@/components/forms/FormModal";
-import { role } from "@/lib/data";
 import PerformanceChart from "@/components/charts/PerformanceChart";
+import { useRole } from "@/context/RoleContext";
 
 const SingleStudentPage = () => {
+  const { role } = useRole();
+
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 xl:flex-row">
       {/* LEFT */}

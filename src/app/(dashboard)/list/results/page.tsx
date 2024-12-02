@@ -1,11 +1,14 @@
+"use client";
+
 import Image from "next/image";
 
 import FormModal from "@/components/forms/FormModal";
 import Pagination from "@/components/pagination/Pagination";
-import { resultsData, role } from "@/lib/data";
+import { resultsData } from "@/lib/data";
 import { Result } from "@/types";
 import TableSearch from "@/components/table/TableSearch";
 import Table from "@/components/table/Table";
+import { useRole } from "@/context/RoleContext";
 
 const columns = [
   {
@@ -43,6 +46,8 @@ const columns = [
 ];
 
 const ResultListPage = () => {
+  const { role } = useRole();
+
   const renderRow = (item: Result) => (
     <tr
       key={item.id}

@@ -3,8 +3,6 @@
 import { Result } from "@/types";
 import { addDays, setHours, setMinutes, startOfWeek } from "date-fns";
 
-export const role = "admin";
-
 export const teachersData = [
   {
     id: 1,

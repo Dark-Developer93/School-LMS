@@ -1,11 +1,14 @@
+"use client";
+
 import Image from "next/image";
 
 import FormModal from "@/components/forms/FormModal";
 import Pagination from "@/components/pagination/Pagination";
 import Table from "@/components/table/Table";
 import TableSearch from "@/components/table/TableSearch";
-import { role, subjectsData } from "@/lib/data";
+import { subjectsData } from "@/lib/data";
 import { Subject } from "@/types";
+import { useRole } from "@/context/RoleContext";
 
 const columns = [
   {
@@ -24,6 +27,8 @@ const columns = [
 ];
 
 const SubjectListPage = () => {
+  const { role } = useRole();
+
   const renderRow = (item: Subject) => (
     <tr
       key={item.id}

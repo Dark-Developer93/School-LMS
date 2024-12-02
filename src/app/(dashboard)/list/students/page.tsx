@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,8 +7,9 @@ import FormModal from "@/components/forms/FormModal";
 import Pagination from "@/components/pagination/Pagination";
 import Table from "@/components/table/Table";
 import TableSearch from "@/components/table/TableSearch";
-import { role, studentsData } from "@/lib/data";
+import { studentsData } from "@/lib/data";
 import { Student } from "@/types";
+import { useRole } from "@/context/RoleContext";
 
 const columns = [
   {
@@ -40,6 +43,8 @@ const columns = [
 ];
 
 const StudentListPage = () => {
+  const { role } = useRole();
+
   const renderRow = (item: Student) => (
     <tr
       key={item.id}

@@ -1,11 +1,14 @@
+"use client";
+
 import Image from "next/image";
 
 import FormModal from "@/components/forms/FormModal";
 import Pagination from "@/components/pagination/Pagination";
 import Table from "@/components/table/Table";
 import TableSearch from "@/components/table/TableSearch";
-import { eventsData, role } from "@/lib/data";
+import { eventsData } from "@/lib/data";
 import { Event } from "@/types";
+import { useRole } from "@/context/RoleContext";
 
 const columns = [
   {
@@ -38,6 +41,8 @@ const columns = [
 ];
 
 const EventListPage = () => {
+  const { role } = useRole();
+
   const renderRow = (item: Event) => (
     <tr
       key={item.id}

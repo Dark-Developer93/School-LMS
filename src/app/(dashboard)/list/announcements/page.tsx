@@ -1,11 +1,14 @@
+"use client";
+
 import Image from "next/image";
 
 import FormModal from "@/components/forms/FormModal";
 import Pagination from "@/components/pagination/Pagination";
 import Table from "@/components/table/Table";
 import TableSearch from "@/components/table/TableSearch";
-import { announcementsData, role } from "@/lib/data";
+import { announcementsData } from "@/lib/data";
 import { Announcement } from "@/types";
+import { useRole } from "@/context/RoleContext";
 
 const columns = [
   {
@@ -28,6 +31,8 @@ const columns = [
 ];
 
 const AnnouncementListPage = () => {
+  const { role } = useRole();
+
   const renderRow = (item: Announcement) => (
     <tr
       key={item.id}

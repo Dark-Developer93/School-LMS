@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import Announcements from "@/components/announcements/Announcements";
 import BigCalendar from "@/components/calendars/BigCalendar";
-import PieChart from "@/components/charts/PieChart";
+// import PieChart from "@/components/charts/PieChart";
 import FormModal from "@/components/forms/FormModal";
 import { role } from "@/lib/data";
 
@@ -165,7 +165,7 @@ const SingleStudentPage = () => {
             </Link>
           </div>
         </div>
-        <PieChart />
+        {/* <PieChart /> */}
         <Announcements />
       </div>
     </div>
